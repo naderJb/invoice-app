@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.nader.invoiceapp.login.presentation.ui.fragment.LoginScreenFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.nader.invoiceapp.home.presentations.ui.fragments.HomeScreenFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen">
+        <argument
+            android:name="userModel"
+            app:argType="com.nader.invoiceapp.login.data.model.UserModel" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_customerScreenFragment"
+            app:destination="@id/customerScreenFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/invoicesScreenFragment"
+        android:name="com.nader.invoiceapp.invoices.presentation.ui.fragments.InvoicesScreenFragment"
+        android:label="fragment_invoices_screen"
+        tools:layout="@layout/fragment_invoices_screen">
+        <argument
+            android:name="customerModel"
+            app:argType="com.nader.invoiceapp.customer.data.model.CustomerModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerScreenFragment"
+        android:name="com.nader.invoiceapp.customer.presentation.ui.fragments.CustomerScreenFragment"
+        android:label="fragment_customer_screen"
+        tools:layout="@layout/fragment_customer_screen">
+        <action
+            android:id="@+id/action_customerScreenFragment_to_invoicesScreenFragment"
+            app:destination="@id/invoicesScreenFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument
+            android:name="userModel"
+            app:argType="com.nader.invoiceapp.login.data.model.UserModel" />
+        <argument
+            android:name="menuModel"
+            app:argType="com.nader.invoiceapp.home.data.model.MenuModel" />
+    </fragment>
+</navigation>

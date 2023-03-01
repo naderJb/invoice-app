@@ -1,0 +1,69 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+    namespace 'com.nader.invoiceapp'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.nader.invoiceapp"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+}
+
+dependencies {
+    def nav_version = "2.5.3"
+    def lottieVersion = "3.4.0"
+    def hilt = "2.45"
+    def ktx = "1.9.0"
+    def appCompat = "1.6.1"
+    def material = "1.8.0"
+    def constrains = "2.1.4"
+    def junit = "4.13.2"
+    def junitExt = "1.1.5"
+    def espresso = "3.5.1"
+
+    implementation "androidx.core:core-ktx:$ktx"
+    implementation "androidx.appcompat:appcompat:$appCompat"
+    implementation "com.google.android.material:material:$material"
+    implementation "androidx.constraintlayout:constraintlayout:$constrains"
+    testImplementation "junit:junit:$junit"
+    androidTestImplementation "androidx.test.ext:junit:$junitExt"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso"
+
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    implementation "com.google.dagger:hilt-android:$hilt"
+    kapt "com.google.dagger:hilt-compiler:$hilt"
+
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+}

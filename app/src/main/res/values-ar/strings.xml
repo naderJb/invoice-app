@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InvoiceApp</string>
+
+    <string-array name="languages">
+        <item name="english">إنجليزي</item>
+        <item name="french">فرنسي</item>
+        <item name="arabic">عربي</item>
+    </string-array>
+
+    <!-- Login Screen /-->
+    <string name="login.username">اسم المستخدم</string>
+    <string name="login.password">كلمة المرور</string>
+    <string name="login.language">لغة</string>
+    <string name="login.login">تسجيل الدخول</string>
+
+    <string name="login.username.error">اسم المستخدم لا يمكن أن يكون فارغا</string>
+    <string name="login.password.error">لا يمكن أن تكون كلمة المرور فارغة</string>
+    <string name="login.language.error">لا يمكن أن تكون اللغة فارغة</string>
+    <string name="login.fillAllFIelds">Please fill all fields</string>
+
+    <string name="customer.add">Add customer</string>
+    <string name="invoice.price">Price</string>
+    <string name="customer.quantity">Quantity</string>
+
+    <string name="customer.add.tv">Add customer %s</string>
+    <string name="invoice.price.tv">Price %s</string>
+    <string name="customer.quantity.tv">Quantity %s</string>
+</resources>

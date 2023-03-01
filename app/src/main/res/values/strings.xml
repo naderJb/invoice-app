@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">InvoiceApp</string>
+
+    <string-array name="languages">
+        <item name="english">English</item>
+        <item name="french">French</item>
+        <item name="arabic">Arabic</item>
+    </string-array>
+
+    <!-- Login Screen /-->
+    <string name="login.username">Username</string>
+    <string name="login.password">Password</string>
+    <string name="login.language">Language</string>
+    <string name="login.login">Login</string>
+
+    <string name="login.username.error">Username cannot be empty</string>
+    <string name="login.password.error">Password cannot be empty</string>
+    <string name="login.language.error">Language cannot be empty</string>
+    <string name="login.fillAllFIelds">Please fill all fields</string>
+
+    <string name="customer.add">Add customer</string>
+    <string name="invoice.price">Price</string>
+    <string name="customer.quantity">Quantity</string>
+
+    <string name="customer.add.tv">Add customer %s</string>
+    <string name="invoice.price.tv">Price %s</string>
+    <string name="customer.quantity.tv">Quantity %s</string>
+</resources>

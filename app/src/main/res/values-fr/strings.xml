@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InvoiceApp</string>
+
+    <string-array name="languages">
+        <item name="english">Anglais</item>
+        <item name="french">Français</item>
+        <item name="arabic">arabe</item>
+    </string-array>
+
+    <!-- Login Screen /-->
+    <string name="login.username">Nom d\'utilisateur</string>
+    <string name="login.password">Password</string>
+    <string name="login.language">Mot de passe</string>
+    <string name="login.login">Connexion</string>
+
+    <string name="login.username.error">Le nom d\'utilisateur ne peut pas être vide</string>
+    <string name="login.password.error">Le mot de passe ne peut pas être vide</string>
+    <string name="login.language.error">La langue ne peut pas être vide</string>
+    <string name="login.fillAllFIelds">Please fill all fields</string>
+
+    <string name="customer.add">Add customer</string>
+    <string name="invoice.price">Price</string>
+    <string name="customer.quantity">Quantity</string>
+
+    <string name="customer.add.tv">Add customer %s</string>
+    <string name="invoice.price.tv">Price %s</string>
+    <string name="customer.quantity.tv">Quantity %s</string>
+</resources>
